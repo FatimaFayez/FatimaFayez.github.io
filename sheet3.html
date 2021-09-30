@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+   <title>sheet3</title>
+     <meta charset="UTF-8">
+ </head>
+      <body>
+        <form method="GET" action="message.html" target="_blank" autocomplete="off">
+            <h1>Coronavirus Intake From for attend class</h1> 
+            <h5>For all of our safety,please fill this out 24 hours prior to each class (until further notice)
+                .Be sure that information you'll give is accurate and complete. please get immediate medical
+                if yoe have any severe COVID-19 signs.
+            </h5>
+            
+        <fieldset>
+            <!--First name -->
+            <label for="fnama" >First Naem:</label> <br> 
+            <input type="text" id="fnama" name="fn"> 
+            <br><br>
+             <!--Last Name-->
+             <label for="last" >Last Naem:</label> <br> 
+            <input type="text" id="last" name="la"> 
+            <br><br>
+             <!--Date of Birth-->
+             <label for="date" >Date of Birth:</label><br>
+             <input type="date" id="date" name="da">
+             <br><br>
+             <!--phone--> 
+             <label for="phone" >phone:</label><br> 
+             <input type="tel"  id="phone" name="ph" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="[555-55-555]" >
+             <br><br>
+             <!--Email-->
+             <label for="email">Email:</label><br>
+             <input type="email" id="email" name="eam">
+             <br><br>
+             <!--radio -->
+            <br><br>
+            <label for="">DO you have "تطمن-تباعد-توكلنا" APPs in yor Phone:</label>
+            <!--radio1 -->
+            <input type="radio" id="yes" name="APPs" value="y">
+            <label for="yes">Yes</label>
+          <!--radio 2-->
+          <input type="radio" id="no" name="APPs" value="n"> 
+          <label for="no">No</label>
+            <br> <br><legend>Personal information:</legend>
+                   </fieldset>
+                   
+                   <br><br>
+                   
+                   <fieldset> 
+                         <!--list-->
+                        <label for="class">Chose class:</label>
+                        <input list="class" name="cl">
+                        <datalist id="class">
+                        <option value="204IT: wep programming">
+                            <option value="201cs:programming1">
+                                <option value="412cs:computer ethic"></datalist>
+                                <br><br>
+                         <!--text -->   
+                         <label for="com">please explain why you need to attend lab?</label><br>
+                         <textarea id="com" name="comment" rows="6" cols="100"></textarea>
+                       <br><br>  <legend>Class information:</legend>
+
+                            </fieldset>
+
+                   <br><br>
+                  
+                  <fieldset>
+                      <label for="he">How healthy do you feel in general?</label><br>
+                     0 <input type="range" id="he" name="re" min="0" max="10">10<br><br>
+                     <!--check-->
+                     <label for="che">check the symptoms that you have experienced in the PAST Week:</label><br>
+                     <input type="checkbox" id="che" name="check" value="Fever/Chills"> 
+                     <label for="che">Fever/Chills</label><br>
+                     <input type="checkbox" id="che" name="che" value="Headaches">
+                     <label for="che">Headaches</label><br>
+                     <input type="checkbox" id="che" name="chee" value="Coughing">
+                     <label for="che">Coughing</label><br>
+    
+                     <input type="checkbox" id="che" name="chea" value="Shortness of breath">
+                     <label for="che">Shortness of breath</label><br>
+                     <input type="checkbox" id="che" name="cher" value="Recent loss of sense of smell or taste">
+                     <label for="che">Headaches</label><br>
+                     <legend>Heath information:</legend>
+                  </fieldset><br><br>
+                  <input type="submit" value="send">
+
+       </body>
+
+
+
+
+
+
+</html>
