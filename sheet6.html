@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+   <title>sheet6</title>
+     <meta charset="UTF-8">
+     <style>
+         #e1 , #e2 , #e3 , #e4  {color: red;}
+     </style>
+     <script>
+        function  validateform(){
+            var r=true;
+            var x =document.getElementById("name").value;
+            var z = document.getElementById("user").value;
+            var d = document.getElementById("pass").value;
+            var n = document.getElementById("conpass").value;
+                                //عشان اجيب القيمة من تحت او احط الوظيفة فيها 
+ // full name
+ var regEx = /^[A-Za-z]+$/;
+ if (!(x.match(regEx)))
+ {document.getElementById("e1").innerHTML= "* only letter is allowed" ;
+ 
+ document.getElementById("name").style.borderColor="red";
+ r=false;} 
+ else
+ { document.getElementById("e1").innerHTML= " ";
+ document.getElementById("name").style.borderColor="black";
+ } 
+ return r;
+ }
+ // user name 
+ 
+ if (!(z.match(regEx)))
+ {document.getElementById("e2").innerHTML= "* only letter is allowed" ;
+ 
+ document.getElementById("user").style.borderColor="red";
+ r= false;} 
+ else
+ { document.getElementById("e2").innerHTML= " ";
+ document.getElementById("user").style.borderColor="black";
+ } 
+ return r;
+      
+//Password
+var regEx2 =  /(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.\W)/ ;
+ if (!(d.match(regEx2)))
+ {document.getElementById("e3").innerHTML= "*password must be filled out" ;
+ 
+ document.getElementById("pass").style.borderColor="red";
+ r= false;} 
+ else
+ { document.getElementById("e3").innerHTML= " ";
+ document.getElementById("pass").style.borderColor="black";
+ } 
+ return r;               
+//confrim password
+ if (!(n.match(regEx2)))
+ {document.getElementById("e4").innerHTML= "*Your passs does not match" ;
+ 
+ document.getElementById("conpass").style.borderColor="red";
+ r= false;} 
+ else
+ { document.getElementById("e4").innerHTML= " ";
+ document.getElementById("conpass").style.borderColor="black";
+ } 
+ return r; 
+
+
+        
+
+
+       </script>
+ </head>
+      <body>
+          <form onsubmit="return validateform()"> <!--(on supmit هي اتربيوت مهمه ايفنت وتنفذ اذا ضغطت على submit وتنفذ الفنكشن-->
+          <h1>SING UP</h1>
+           <!--Full name -->
+           <label for="name" >Full Name:</label> <span id="e1"></span>
+           <input type="text" id="name" name="fu"> 
+           <br><br>
+            <!--User Name-->
+            <label for="user" >User Name:</label> <span id="e2"></span>
+           <input type="text" id="user" name="us"> 
+           <br><br>
+           <!--pass-->   
+           <label for="pass">Password</label> <span id="e3"></span>
+           <input type="password" id="pass" name="pa">
+           <br><br>
+           <label for="conpass">confrim password</label> <span id="e4"></span>
+           <input type="password" id="conpass" name="c">
+           <br><br>
+           <input type="submit" value="Sing up">  
+          </form>
+      </body>
+</html>
